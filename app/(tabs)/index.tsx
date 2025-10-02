@@ -5,6 +5,8 @@ import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { Button } from '@/components/ui/button';
+import { Text } from '@/components/ui/text';
 import { Link } from 'expo-router';
 
 export default function HomeScreen() {
@@ -20,6 +22,18 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">React Native Reusables Test</ThemedText>
+        <Button onPress={() => alert('Button pressed!')}>
+          <Text>Click me!</Text>
+        </Button>
+        <Button variant="outline" onPress={() => alert('Outline button pressed!')}>
+          <Text>Outline Button</Text>
+        </Button>
+        <Button variant="secondary" size="sm" onPress={() => alert('Small secondary button pressed!')}>
+          <Text>Small Secondary</Text>
+        </Button>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
