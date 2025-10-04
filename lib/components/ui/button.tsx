@@ -1,4 +1,4 @@
-import { TextClassContext } from '@/components/ui/text';
+import { TextClassContext } from '@/lib/components/ui/text';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Platform, Pressable } from 'react-native';
@@ -106,3 +106,4 @@ function Button({ className, variant, size, ...props }: ButtonProps) {
 
 export { Button, buttonTextVariants, buttonVariants };
 export type { ButtonProps };
+
